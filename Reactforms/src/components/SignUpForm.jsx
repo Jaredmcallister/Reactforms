@@ -1,7 +1,6 @@
 import { useState } from "react";
-const [username, setUsername] = useState("");
-const [password, setPassword] = useState("");
-const [error, setError] = useState(null);
+
+
 async function handleSubmit(event) {
   event.preventDefault();
   console.log("Hello 👋");
@@ -13,19 +12,25 @@ async function handleSubmit(event) {
 //}
 //wanna know how to write this in es6?
 const SignUpForm = () => {
-<>
-  return <h2>Sign up</h2>
-  <form>
-    <label>
-      Username: <input/>
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState(null);
+const handleSubmit(event) {event.preventDefault();
+  console.log("hello");
+}
+  <>
+    return <h2>Sign up</h2>
+    <form>
+      <label>
+        Username: <input />
       </label>
       <label>
-        Password: <input/>
+        Password: <input />
 
-    </label>
-    <button>Submit</button>
-  </form>
-  <input value={username} onChange={(event) => setUsername(event.target.value)} />
+      </label>
+      <button>Submit</button>
+    </form>
+    <input value={username} onChange={(event) => setUsername(event.target.value)} />
   </>
 }
 
